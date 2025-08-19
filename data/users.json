@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@company.com",
+      "password": "Admin123!",
+      "name": "Admin User",
+      "role": "admin",
+      "authType": "local",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "lastLogin": null
+    },
+    {
+      "id": "2",
+      "email": "user@company.com",
+      "password": "User123!",
+      "name": "Regular User",
+      "role": "user",
+      "authType": "local",
+      "createdAt": "2025-01-01T00:00:00Z",
+      "lastLogin": null
+    },
+    {
+      "id": "3",
+      "email": "sso.user@external.com",
+      "name": "SSO User",
+      "role": "user",
+      "authType": "sso",
+      "samlAttributes": {
+        "email": "sso.user@external.com",
+        "firstName": "SSO",
+        "lastName": "User",
+        "department": "Engineering"
+      },
+      "createdAt": "2025-01-01T00:00:00Z",
+      "lastLogin": "2025-08-19T09:27:09.932Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "a0ce816c-c8bb-4e67-86d1-6997deb4d1c1",
+      "userId": "3",
+      "token": "9f985f5ab52af3d78d5e538a76a8f6e51cf448fdebdc263ee5abedbf02fc2da4",
+      "expiresAt": "2025-08-20T09:25:45.071Z",
+      "createdAt": "2025-08-19T09:25:45.071Z"
+    },
+    {
+      "id": "1bcf607f-f783-443a-8709-3cd2a91bc678",
+      "userId": "3",
+      "token": "cb0cd921ef30c30d39d7e42494d26ea65e4cf6d593e39fec4a066d7681eb14e6",
+      "expiresAt": "2025-08-20T09:26:11.827Z",
+      "createdAt": "2025-08-19T09:26:11.827Z"
+    },
+    {
+      "id": "af1f52d0-264d-4f80-844b-bf8646ad364f",
+      "userId": "3",
+      "token": "bf78111a3f5ba5511c60ed3699335e90660f987a81fd2b352e3fb03538944d7b",
+      "expiresAt": "2025-08-20T09:27:09.920Z",
+      "createdAt": "2025-08-19T09:27:09.920Z"
+    }
+  ],
+  "resetTokens": []
+}

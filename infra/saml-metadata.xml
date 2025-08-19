@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="mock-saml-idp">
+  <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIBkTCB+wIJAKZk8+qh5TgkMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNVBAMTC21vY2stc2FtbC1pZHAwHhcNMjUwMTAxMDAwMDAwWhcNMzUwMTAxMDAwMDAwWjAWMRQwEgYDVQQDEwtlbnRpdHlpZC5pZDBcMA0GCSqGSIb3DQEBAQUAA0sAMEgCQQC1h7Q+/ZQl9FU9aK5D1UgO/JkLhLO1VB/NzD3ZPNbBFZSPfVo1k8xKJ2U9aJ5jKZm0+gGKNsE3K4D5o3dD5QABAgMBAAEwDQYJKoZIhvcNAQEFBQADQQC1h7Q+/ZQl9FU9aK5D1UgO/JkLhLO1VB/NzD3ZPNbBFZSPfVo1k8xKJ2U9aJ5jKZm0+gGKNsE3K4D5o3dD5QAB</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost:3000/api/mock-idp/sso"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost:3000/api/mock-idp/sso"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>

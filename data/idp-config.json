@@ -1,0 +1,32 @@
+{
+    "idp": {
+        "name": "Mock SAML IdP",
+        "ssoUrl": "http://localhost:3000/api/mock-idp/sso",
+        "entityId": "mock-idp",
+        "certificate": "-----BEGIN CERTIFICATE-----\nMOCK_CERTIFICATE_DATA\n-----END CERTIFICATE-----",
+        "users": [
+            {
+                "email": "sso.user@external.com",
+                "firstName": "SSO",
+                "lastName": "User",
+                "department": "Engineering",
+                "password": "SSOUser123!"
+            },
+            {
+                "email": "manager@external.com",
+                "firstName": "Manager",
+                "lastName": "User",
+                "department": "Management",
+                "password": "Manager123!"
+            }
+        ]
+    },
+    "samlConfig": {
+        "sp": {
+            "entityId": "nextjs-sso-demo",
+            "assertionConsumerServiceUrl": "http://localhost:3000/api/sso",
+            "certificate": "-----BEGIN CERTIFICATE-----\nMOCK_SP_CERTIFICATE_DATA\n-----END CERTIFICATE-----",
+            "privateKey": "-----BEGIN PRIVATE KEY-----\nMOCK_SP_PRIVATE_KEY_DATA\n-----END PRIVATE KEY-----"
+        }
+    }
+}
